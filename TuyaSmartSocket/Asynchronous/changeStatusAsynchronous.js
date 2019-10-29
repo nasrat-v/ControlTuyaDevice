@@ -2,7 +2,7 @@ const TuyAPI = require('tuyapi');
 
 const device = new TuyAPI({
   id: '23106066bcddc298d80e',
-  key: '0c4cb533c7013fce'});
+  key: '6df35ba291cb464b'});
 
 let stateHasChanged = false;
 
