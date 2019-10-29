@@ -1,3 +1,4 @@
+
 const TuyAPI = require('tuyapi');
 
 const device = new TuyAPI({
@@ -32,7 +33,7 @@ device.on('data', data => {
 
   // Set default property to opposite
     if (!stateHasChanged) {
-	device.set({dps: 20, set: true}).then(() => console.log('Device was changed'))
+      device.set({dps: 20, set: true}).then(() => console.log('Device was changed'))
       // set multiple properties
       /*device.set({
           multiple: true,
@@ -52,5 +53,5 @@ device.on('data', data => {
   }
 });
 
-// Disconnect after 10 seconds
-setTimeout(() => { device.disconnect(); }, 10000);
+// Disconnect after 3 seconds
+setTimeout(() => { device.disconnect(); }, 3000);

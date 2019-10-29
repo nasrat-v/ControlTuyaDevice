@@ -1,3 +1,4 @@
+
 const TuyAPI = require('tuyapi');
 
 const device = new TuyAPI({
