@@ -6,3 +6,8 @@ Control smart socket with NodeJS on Linux Gateway
 
 ## TuyaSmartLight
 Control smart light with NodeJS on Linux Gateway
+
+## Installation
+
+#### node_modules required
+- tuyapi
