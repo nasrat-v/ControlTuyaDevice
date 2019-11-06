@@ -9,15 +9,19 @@ const device = new TuyAPI({
 
   await device.connect();
 
-  let status = await device.get();
+  //await device.set({ dps: true });
+  await device.set({ dps: 28, set: 'colour' });
+  await device.set({ dps: 31, set: 'ff040000016464' });
+  /*await device.set({
+    multiple: true,
+    data: {
+      '1': true,
+      '27': true,
+      '28': 'colour',
+      '31': 'ff040000016464'
+   }}).then(() => console.log('device was changed'))*/
 
-  console.log(`Current status: ${status}.`);
-
-  await device.set({set: !status});
-
-  status = await device.get();
-
-  console.log(`New status: ${status}.`);
+//  await device.get({schema: true}).then(data => console.log(data))
 
   device.disconnect();
 })();
